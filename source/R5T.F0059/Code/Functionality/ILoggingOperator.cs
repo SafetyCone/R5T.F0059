@@ -11,6 +11,12 @@ namespace R5T.F0059
 	[FunctionalityMarker]
 	public partial interface ILoggingOperator : IFunctionalityMarker
 	{
+		public ILogger GetNullLogger()
+        {
+			var logger = Microsoft.Extensions.Logging.Abstractions.NullLogger.Instance;
+			return logger;
+		}
+
 		/// <inheritdoc cref="Documentation.ActionInLogContext"/>
 		public void InLogContext(
 			ILogger logger,
