@@ -34,7 +34,7 @@ public static class ILoggerExtensions
 			action);
 	}
 
-	/// <inheritdoc cref="R5T.F0059.ILoggingOperator.InLogContext{TOutput}(ILogger, string, string, Func{TOutput})
+	/// <inheritdoc cref="R5T.F0059.ILoggingOperator.InLogContext{TOutput}(ILogger, string, string, Func{TOutput})"/>
 	public static TOutput InLogContext<TOutput>(this ILogger logger,
 		string initialInformationMessage,
 		string finalDebugMessage,
