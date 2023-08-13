@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 
 using R5T.T0132;
 
@@ -11,9 +12,12 @@ namespace R5T.F0059
 	[FunctionalityMarker]
 	public partial interface ILoggingOperator : IFunctionalityMarker
 	{
-		public ILogger GetNullLogger()
+		/// <summary>
+		/// Returns the <see cref="NullLogger.Instance"/> singleton.
+		/// </summary>
+		public ILogger Get_NullLogger()
         {
-			var logger = Microsoft.Extensions.Logging.Abstractions.NullLogger.Instance;
+			var logger = NullLogger.Instance;
 			return logger;
 		}
 
